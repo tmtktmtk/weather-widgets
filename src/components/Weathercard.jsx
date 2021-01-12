@@ -25,8 +25,16 @@ function Weathercard(props) {
             <h2 className="ml-auto mr-4 mt-3 mb-0">
               {props.weather.name}, {props.weather.sys.country}
             </h2>
-            <p className="ml-auto mr-4 mb-0 med-font">
-              {props.weather.weather[0].main}
+            <p className="ml-auto mr-4 mb-0 ">
+              {props.weather.weather[0].description}
+            </p>
+            <p className="ml-auto mr-4 mb-0 ">
+              <small>
+                Wind speed: {Math.round(props.weather.wind.speed)} m/s
+              </small>
+            </p>
+            <p className="ml-auto mr-4 mb-0 ">
+              <small>Wind direction: {props.weather.wind.deg}°</small>
             </p>
             <h1 className="ml-auto mr-4 large-font">
               {Math.round(props.weather.main.temp)}°C

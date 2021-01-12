@@ -55,7 +55,6 @@ function App() {
         searchCoor(rep.location.lat, rep.location.lng);
       });
   };
-  console.log(new Date());
   return (
     <div className="main">
       <div className="search-container">
